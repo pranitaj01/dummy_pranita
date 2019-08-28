@@ -1,24 +1,24 @@
 pipeline{
-    agent any
+    agent any;
     stages{
-        stages('Sonarqube Analysis'){
+        stage('Sonarqube Analysis'){
             steps{
                 sh 'echo Sonarqube Analysis'
             }
         }
-        stages('Build'){
+        stage('Build'){
             steps{
-                sh 'build stage'
+                sh 'echo build stage'
             }
         }
-        stages('test'){
+        stage('test'){
             steps{
-                sh 'test stage'
+                sh 'echo test stage'
             }
         }
-        stages('deploy'){
+        stage('deploy'){
             steps{
-                sh 'deploy stage'
+                sh 'echo deploy stage'
             }
         }
     }
